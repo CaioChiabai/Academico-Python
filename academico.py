@@ -27,18 +27,29 @@ def main():
     
     if verifica_login(matricula,senha,dic_login) == True:
         print("Matricula encontrada")
-        if matricula[0] == '1':
-            print("Bem vindo Diretor")
-            print("Escolha qual dos itens abaixo deseja realizar:")
-            print("1. Visualizar base de dados\n2. Adicionar\n3. Remover\n4. Editar")
-            escolha = int(input("Escolha qual dos itens acima deseja realizar: "))
-        elif matricula[0] == '5':
-            print("Bem vindo Professor(a)")
-        elif matricula[0] == '9':
-            print("Bem vindo Aluno(a)")
+        
+        match matricula[0]:
+            case "1":
+                print("Bem vindo Diretor")
+                print("Escolha qual dos itens abaixo deseja realizar:")
+                print("1. Visualizar base de dados\n2. Adicionar\n3. Remover\n4. Editar")
+                escolha = int(input("Escolha qual dos itens acima deseja realizar: "))
+                match escolha:
+                    case 1:
+                    
+                    case 2:
+
+                    case 3:
+
+                    case 4:
+                        
+            case "5":
+                print("Bem vindo Professor(a)")
+            case "9":
+                print("Bem vindo Aluno(a)")
 
     else:
         print("Erro no login")
 
-    #close(arqLogin)
+    arqLogin.close()
 main()
